@@ -6,7 +6,7 @@
   "files": [
     "dist/"
   ],
-  "module": "dist/algofi.js",
+  "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/com/algofiorg/algofi-javascript-sdk.git"
