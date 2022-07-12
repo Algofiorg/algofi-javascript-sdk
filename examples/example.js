@@ -4,10 +4,15 @@ const algofi = require("../.")
 //const m = "frame auto erosion drop weasel lecture health marine aisle stuff home harsh enough result market boost unknown carbon approve hello deputy what member abstract penalty"
 //const a = "F44Y7B4O4DPUOXPZTHHJ36N7INEG7G4DC6XZ6CSDRORAQQW7YOE4KBZYPU"
 //const a = "WO7ZA3GTZZTWEIU427ZZZ674RPYUUN5LOQJF5TBY2YYFBTTNOR33X45RYI"
-const m = "chicken myth waste moral chuckle boil gossip cash gaze wreck devote give inhale because mango asthma relief grain power castle february level hazard about wish"
-const a = "2NJEG3XKJZQ4PDSFXGIHOSTTY7Q7MBFZ76JQPMWNWV7O3LIB3T3JJYWLPE"
-const decoded_a = algosdk.decodeAddress(a)
-const sk = algosdk.mnemonicToSecretKey(m).sk
+//const m = "chicken myth waste moral chuckle boil gossip cash gaze wreck devote give inhale because mango asthma relief grain power castle february level hazard about wish"
+//const a = "2NJEG3XKJZQ4PDSFXGIHOSTTY7Q7MBFZ76JQPMWNWV7O3LIB3T3JJYWLPE"
+//const decoded_a = algosdk.decodeAddress(a)
+//const sk = algosdk.mnemonicToSecretKey(m).sk
+
+const m = "office merry fancy nice swamp exhaust disorder quit sort fine burden payment domain choice kitchen crouch fruit gym juice hard embark gym neither ability entire"
+const user1 = "6CKR7CXRC4DR4HTU4APF2JZZLSBR4JLNSAWPGONE72B5DTMVQUWKYGE76E"
+const user1sk = algosdk.mnemonicToSecretKey(m).sk
+
 
 async function test() {
   let client = new algosdk.Algodv2(
@@ -19,6 +24,55 @@ async function test() {
   console.log("TESTING")
   let a_client = new algofi.AlgofiClient(client, algofi.Network.MAINNET_CLONE2)
   await a_client.loadState()
+
+	let user = await a_client.getUser(user1)
+	let staking = a_client.staking.stakingContracts[805980186]
+
+//		// OPT IN TO STAKING CONTRACT
+//	console.log("OPT IN STAKING CONTRACT")
+//	let optInTxns = await staking.getUserOptInTxns(user)
+//	console.log("SIGN TXNS")
+//	let stxn0 = algosdk.signTransaction(optInTxns[0], user1sk)
+//	stxns = [stxn0.blob]
+//	console.log("SEND TXNS")
+//	let srt = await client.sendRawTransaction(stxns).do()
+
+	// STAKE
+//	console.log("STAKE")
+//	let stakeTxns = await staking.getStakeTxns(user, 10000)
+//	console.log("SIGN TXNS")
+//	let stxn0 = algosdk.signTransaction(stakeTxns[0], user1sk)
+//	let stxn1 = algosdk.signTransaction(stakeTxns[1], user1sk)
+//	stxns = [stxn0.blob, stxn1.blob]
+//	console.log("SEND TXNS")
+//	let srt = await client.sendRawTransaction(stxns).do()
+
+	// UNSTAKE
+//	console.log("UNSTAKE")
+//	let unstakeTxns = await staking.getUnstakeTxns(user, 1000)
+//	console.log("SIGN TXNS")
+//	let stxn0 = algosdk.signTransaction(unstakeTxns[0], user1sk)
+//	stxns = [stxn0.blob]
+//	console.log("SEND TXNS")
+//	let srt = await client.sendRawTransaction(stxns).do()
+
+	// CLAIM
+//	console.log("CLAIM")
+//	let claimTxns = await staking.getClaimTxns(user)
+//	console.log("SIGN TXNS")
+//	let stxns = []
+//	if (claimTxns.length == 0) {
+//		console.log("nothing to claim!")
+//	}
+//	else {
+//		for (let i = 0; i < claimTxns.length; ++i) {
+//			let stxn = algosdk.signTransaction(claimTxns[i], user1sk)
+//			stxns.push(stxn.blob)
+//		}
+//		console.log("SEND TXNS")
+//		let srt = await client.sendRawTransaction(stxns).do()
+//	}
+
 //
 //  let user = await a_client.getUser(a)
 //  let market = a_client.lending.markets[802881530]
