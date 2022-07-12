@@ -55,7 +55,6 @@ export default class Staking {
   async loadState() {
     // loading in global state staking specific
     const globalState = await getApplicationGlobalState(this.algod, this.appId)
-
     this.latestTime = globalState[STAKING_STRINGS.latest_time]
     this.rewardsEscrowAccount = parseAddressBytes(globalState[STAKING_STRINGS.rewards_escrow_account])
     this.boostMultiplierAppId = globalState[STAKING_STRINGS.boost_multiplier_app_id]
@@ -67,7 +66,6 @@ export default class Staking {
 
     // loading in rewards program specific state
     const formattedState = formatPrefixState(globalState)
-
     for (let i = 0; i < this.rewardsProgramCount; ++i) {
       this.rewardsProgramStates[i] = new RewardsProgramState(formattedState, i)
     }

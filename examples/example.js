@@ -19,12 +19,10 @@ async function test() {
   console.log("TESTING")
   let a_client = new algofi.AlgofiClient(client, algofi.Network.MAINNET_CLONE2)
   await a_client.loadState()
-
-  let user = await a_client.getUser(a)
-  let market = a_client.lending.markets[802881530]
-  let stxns = []
-  
-  console.log(user.lending)
+//
+//  let user = await a_client.getUser(a)
+//  let market = a_client.lending.markets[802881530]
+//  let stxns = []
   
   //console.log(user.lending.userMarketStates[753108247])
   //console.log(user)

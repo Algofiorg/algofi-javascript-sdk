@@ -15,7 +15,8 @@ export default class StakingConfig {
 
 export const StakingConfigs = {
   [Network.MAINNET_CLONE]: [new StakingConfig(785597550, 785578010), new StakingConfig(785599248, 785579619)],
-  [Network.MAINNET_CLONE2]: [new StakingConfig(785597550, 785578010), new StakingConfig(785599248, 785579619)],
+  //[Network.MAINNET_CLONE2]: [new StakingConfig(785597550, 785578010), new StakingConfig(785599248, 785579619)],
+  [Network.MAINNET_CLONE2]: [new StakingConfig(805980186, 802871797), new StakingConfig(805982398, 802872834)],
   [Network.TESTNET]: [new StakingConfig(96414588, 96410661), new StakingConfig(96418091, 96410672)]
 }
 
