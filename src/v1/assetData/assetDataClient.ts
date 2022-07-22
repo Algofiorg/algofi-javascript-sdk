@@ -21,7 +21,7 @@ export default class AssetDataClient {
   public algofiClient: AlgofiClient
   public algod: Algodv2
   public network: Network
-  public assetConfigs: AssetConfig[]
+  public assetConfigs: { [key: number]: AssetConfig}
   public assets: { [key: number]: Asset } = {}
 
   constructor(algofiClient: AlgofiClient) {

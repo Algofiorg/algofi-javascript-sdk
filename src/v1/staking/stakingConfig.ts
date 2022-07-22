@@ -38,6 +38,8 @@ export const StakingConfigs = {
     new StakingConfig(805982398, 802872834, StakingType.V2),
     new StakingConfig(807135066, 802887476, StakingType.BASSET)
   ],
+  [Network.MAINNET_CLONE3]: [
+  ],
   [Network.TESTNET]: [
     new StakingConfig(96414588, 96410661, StakingType.V2),
     new StakingConfig(96418091, 96410672, StakingType.V2)
@@ -47,6 +49,7 @@ export const StakingConfigs = {
 export const rewardsManagerAppId = {
   [Network.MAINNET_CLONE]: 785584132,
   [Network.MAINNET_CLONE2]: 805940592,
+  [Network.MAINNET_CLONE3]: 805940592, // TODO def wrong
   [Network.TESTNET]: 94796687
 }
 
