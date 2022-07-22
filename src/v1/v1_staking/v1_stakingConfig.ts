@@ -33,7 +33,8 @@ export const V1StakingConfigs = {
     new V1StakingConfig("STBL Staking", 482625868, 482608867, 465865291, 451327550)
   ],
   [Network.MAINNET_CLONE2]: [
-    new V1StakingConfig("STBL Staking", 482625868, 482608867, 465865291, 451327550)
+    new V1StakingConfig("STBL Staking", 482625868, 482608867, 465865291, 451327550),
+    new V1StakingConfig("GOMINT-STBL-LP-0.25%", 764407972, 764406975, 764421152, 451327550),
   ],
   [Network.TESTNET]: []
 }
